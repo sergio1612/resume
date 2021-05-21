@@ -185,6 +185,10 @@ border-radius: 30px;
     margin-top: 20px;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    
+   transition: 2s;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius:0px;
 
 }
 .service-box .fa{
@@ -210,6 +214,7 @@ border-radius: 30px;
     border-top-left-radius: 50px;
     border-bottom-right-radius:50px;
     transition: 1s;
+    /* transform: translate(0,-10%); */
 }
 .service-box:hover p{
     color:#fff;
