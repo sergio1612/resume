@@ -1,9 +1,14 @@
+@font-face {
+    font-family: 'futura';
+    src: url(futur.ttf);
+}
 body
 {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: futura;
 }
+
 /*--------Header CSS--------*/
 #header
 {
@@ -21,17 +26,38 @@ body
     
 }
 .user-box img{
-    border-radius: 50%;
     width: 250px;
+    height:250px ;
+    border-radius: 50%;
     border: 2px solid #6caed5;
+    transition: 1s;
 }
+.user-box img:hover{
+    filter: drop-shadow( 0px 0px 15px rgba(255,255,255,0.5));
+    
+}
+.user-box::before{
+    position: absolute;
+    content: "";
+    top: 0%;
+    margin-top: -15px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width:280px;
+    height:280px ;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    z-index: -1;
+}
+
 .user-box h1{
     color: aliceblue;
-    font-family: futura md bt;
+    font-family: futura;
     margin: 10px;
 }
 .user-box p{
     color: aliceblue;
+    font-size: larger;
 
 }
 .scroll-btn{
@@ -254,6 +280,11 @@ border-radius: 30px;
 .contact .btn:focus{
      box-shadow: none !important;
     
+}
+.contact .btn:hover{
+    border: 2px solid #000 !important;
+    background: #000 !important;
+    transition: 0.6s;
 }
 .contact .btn:hover{
     border: 2px solid #000 !important;
